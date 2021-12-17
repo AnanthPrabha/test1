@@ -1,10 +1,7 @@
 pipeline {
 
 	agent any
-	environment {  
-         // NUGET_PACKAGES = "D:/NugetPackageCache"
-   }
-
+	
 	stages {
 	
 		stage('Restore Solution') {
