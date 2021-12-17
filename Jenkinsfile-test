@@ -20,7 +20,7 @@ pipeline {
                //bat 'msbuild.exe NovoWpfKiosk//NovoWPFKiosk.csproj /t:Publish /p:Configuration=Release /p:Platform="x86"'
 			  sh 'ls -l'
 			  writeFile file:'dummy', text:''
-			  sh 'ls -l
+			  sh 'ls -l'
 			}
 		}
 
