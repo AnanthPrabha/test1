@@ -18,8 +18,7 @@ pipeline {
 			echo "test"
 		
                //bat 'msbuild.exe NovoWpfKiosk//NovoWPFKiosk.csproj /t:Publish /p:Configuration=Release /p:Platform="x86"'
-			   echo $PATH
-			   echo $USERNAME
+			  sh mkdir testdir
 			}
 		}
 
