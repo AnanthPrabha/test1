@@ -1,0 +1,33 @@
+pipeline {
+
+	agent any
+	environment {  
+         // NUGET_PACKAGES = "D:/NugetPackageCache"
+   }
+
+	stages {
+	
+		stage('Restore Solution') {
+			steps {
+		
+			   
+			   //bat "D:/NuGet/nuget.exe restore $WORKSPACE/NovoWpfKiosk/NovoWPFKiosk.csproj -PackagesDirectory D:/Jenkins/workspace/novocinemas-qa-kiosk-hd-dev/NovoWpfKiosk/packages/"
+			   sh "cd /home;ls"
+			}
+		}
+	
+		stage('Publish Solution') {
+			steps {
+			echo "test"
+		
+               //bat 'msbuild.exe NovoWpfKiosk//NovoWPFKiosk.csproj /t:Publish /p:Configuration=Release /p:Platform="x86"'
+			   echo $PATH
+			   echo $USERNAME
+			}
+		}
+
+
+}
+
+
+}
